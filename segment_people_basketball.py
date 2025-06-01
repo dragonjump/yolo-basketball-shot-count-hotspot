@@ -27,8 +27,8 @@ counter = solutions.ObjectCounter(
     show_in=True,
     show_out=True,
     region=region_points,
-    # model="yolo11x.pt",  # COCO model
-    model="best.pt",  # COCO model
+    # model="yolo12x.pt",  # COCO model
+    model="best.pt",  # COCO model from yolo12x
     # classes=[32],  # sports ball
 )
 

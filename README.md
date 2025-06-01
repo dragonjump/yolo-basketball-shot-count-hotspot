@@ -1,16 +1,48 @@
+# Basketball Shot Detector and Human Player Segmentation
+
+This project provides:
+
+- **Basketball Shot Detector/Counter:**
+  - Counts basketballs (or shots) entering a defined region in the video using YOLO-based object detection.
+  - You can define a custom region (e.g., the hoop area) and the system will count how many times a basketball enters this region.
+  - Supports both COCO models (for generic sports ball detection) and custom-trained models for basketballs.
+
+- **Human Player Segmentation:**
+  - Performs instance segmentation of human players in the video using YOLO11 segmentation models.
+  - Only people are segmented (COCO class 0), but you can adjust to segment other classes if needed.
+
+- **Combined Output:**
+  - The script can overlay both the basketball region counting and the human segmentation mask on the same video output, so you can visualize both detections at once.
+
+## Usage
+
+- Place your video file in the `video/` directory.
+- For basketball shot counting, adjust the region coordinates in the script to match your hoop or area of interest.
+- If your video is black ball or not recognized, you need to train. See `training` folder. Otherwise, you may just run and download `yolo-11x.pt` or `yolo12px.pt`
+- For human segmentation, make sure you have the YOLO11 segmentation model (e.g., `yolo11x-seg.pt`).
+- Run the provided scripts (e.g., `segment_people_basketball.py`) to process your video and generate an output with both overlays.
+ 
+## Requirements
+- Python 3.1+
+- OpenCV
+- Ultralytics YOLO models (see scripts for model file names)
+
+## Credits
+- Built using Ultralytics YOLO11 models for detection and segmentation.
+
+---
+
+For more details, see comments in the scripts or ask for help!
 
  
-# Video human Counter  
- 
-This repository provides a solution for counting people in videos or live streams. It uses a hexagonal region-based counter: each time a person crosses a defined line, the system counts them and tracks how long they remain within the beyond 1 multiple regions. The result output then comapres result.
-
 
 ## Demo  
 See `demo.gif`
 [demo](demo.gif)
 ![demo](demo.gif)
 
-
+# More references
+https://colab.research.google.com/github/EdjeElectronics/Train-and-Deploy-YOLO-Models/blob/main/Train_YOLO_Models.ipynb#scrollTo=gzaJQ2sGEPhP
 
 ## Setup 
 1. Download `yolo12n.pt`
@@ -30,7 +62,7 @@ Run this way.
 
 
 ```
-(ultralytics-env) python main_yolo_region.py --source video/human.mp4 --weights yolo12n.pt --view-img --save-img
+(ultralytics-env) python segment_people_basketball.mp4
 ```
  
 
