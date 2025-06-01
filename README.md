@@ -14,13 +14,7 @@ This project provides:
 - **Combined Output:**
   - The script can overlay both the basketball region counting and the human segmentation mask on the same video output, so you can visualize both detections at once.
 
-## Usage
-
-- Place your video file in the `video/` directory.
-- For basketball shot counting, adjust the region coordinates in the script to match your hoop or area of interest.
-- If your video is black ball or not recognized, you need to train. See `training` folder. Otherwise, you may just run and download `yolo-11x.pt` or `yolo12px.pt`
-- For human segmentation, make sure you have the YOLO11 segmentation model (e.g., `yolo11x-seg.pt`).
-- Run the provided scripts (e.g., `segment_people_basketball.py`) to process your video and generate an output with both overlays.
+ 
  
 ## Requirements
 - Python 3.1+
@@ -45,7 +39,7 @@ See `demo.gif`
 https://colab.research.google.com/github/EdjeElectronics/Train-and-Deploy-YOLO-Models/blob/main/Train_YOLO_Models.ipynb#scrollTo=gzaJQ2sGEPhP
 
 ## Setup 
-1. Download `yolo12n.pt`
+1. Download `yolo11x-seg.pt` and `yolo12px.pt` and place them root folder.
 2.Search online how setup conda. 
 Once you setup, create a conda environment with Python 3.11:
 ```
@@ -59,18 +53,13 @@ conda deactivate ultralytics-env
 You may adjust the parameter in the code accordingly. Do read the ultralytics doc.
 Run this way.
  
+3. Place your own basketball video in `/video/basketball.mp4`
 
+4. If your basketball not detected as `sports ball` , see `training/README.md` to train.
 
 ```
 (ultralytics-env) python segment_people_basketball.mp4
 ```
  
 
-## Video credit 
-https://www.youtube.com/watch?v=Mp6klx9oeZs&pp=ygUlY29weXJpZ2h0IGZyZWUgZHJvbmUgdmlldyBjYXIgdHJhZmZpYw%3D%3D 
-
-
-## Detail Doc   
-1. Object counting - https://docs.ultralytics.com/guides/object-counting/#objectcounter-arguments
-2. Object counting - https://docs.ultralytics.com/tasks/obb/#visual-samples
-3. Region counting - https://docs.ultralytics.com/guides/region-counting/
+ 

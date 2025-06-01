@@ -1,6 +1,6 @@
 
 # Setup
-1. Use label studio to  do training
+1. Use label studio to do training
 2. Once you done export and dowload the folders like `labelstudio`
 3. Now begin steps below. You can use google collab or your machine
 
