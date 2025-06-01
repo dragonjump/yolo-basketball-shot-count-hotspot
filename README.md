@@ -15,6 +15,12 @@ This project provides:
   - The script can overlay both the basketball region counting and the human segmentation mask on the same video output, so you can visualize both detections at once.
 
  
+
+## Demo  
+See `demo.gif`
+[demo](demo.gif)
+![demo](demo.gif)
+
  
 ## Requirements
 - Python 3.1+
@@ -29,12 +35,6 @@ This project provides:
 For more details, see comments in the scripts or ask for help!
 
  
-
-## Demo  
-See `demo.gif`
-[demo](demo.gif)
-![demo](demo.gif)
-
 # More references
 https://colab.research.google.com/github/EdjeElectronics/Train-and-Deploy-YOLO-Models/blob/main/Train_YOLO_Models.ipynb#scrollTo=gzaJQ2sGEPhP
 
