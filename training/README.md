@@ -8,8 +8,7 @@ Pretraining:>>
 ``` 
  
  python  1_convert_labelstudio_yolo_train 
- python  2_generate_yaml_for_yolo_train.py
- python  3_generate_yolo_train.py
+ python  2_generate_yaml_for_yolo_train.py 
 
 ```
 
